@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validate(Email.getText().toString(), Password.getText().toString());
-
-
                 // Calling EditText is empty or no method.
                 //CheckEditTextStatus();
                 // Calling login method.
@@ -56,8 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String usrEmail, String userPassword) {
         if ((usrEmail.equals("test@test.com")) && (userPassword.equals("test"))) {
+            Toast.makeText(MainActivity.this,"Welcome " + usrEmail, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this, TimerActivity.class);
             startActivity(intent);
+        } else {
+            Toast.makeText(MainActivity.this, "Email and password do not match!", Toast.LENGTH_SHORT).show();
         }
     }
 
