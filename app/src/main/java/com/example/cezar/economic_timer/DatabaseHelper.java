@@ -9,16 +9,12 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+
     static String DATABASE_NAME="UserDataBase";
-
     public static final String TABLE_NAME="UserTable";
-
     public static final String Table_Column_ID="id";
-
     public static final String Table_Column_1_Name="name";
-
     public static final String Table_Column_2_Email="email";
-
     public static final String Table_Column_3_Password="password";
 
     public DatabaseHelper(Context context) {

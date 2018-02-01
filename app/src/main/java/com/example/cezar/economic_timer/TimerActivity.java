@@ -99,7 +99,7 @@ public class TimerActivity extends AppCompatActivity {
                 mChronometer.stop();
                 final AlertDialog.Builder builder = new AlertDialog.Builder(TimerActivity.this);
                 builder.setTitle("Stop alert");
-                builder.setMessage("Have you finished working mate?");
+                builder.setMessage("Have you finished working?");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -108,7 +108,7 @@ public class TimerActivity extends AppCompatActivity {
                         imgbtnStart.setEnabled(true);
                         final AlertDialog.Builder builder1 = new AlertDialog.Builder(TimerActivity.this);
                         builder1.setTitle("Save");
-                        builder1.setMessage("Do you want to save your progress mate?");
+                        builder1.setMessage("Do you want to save your progress?");
                         builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
