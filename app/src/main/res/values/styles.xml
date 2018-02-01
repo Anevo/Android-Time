@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- Menu Theme -->
+    <style name="CustomMenuTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">#ffffff</item>
+        <item name="android:text">#e78200</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+</resources>
