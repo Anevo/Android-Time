@@ -1,10 +1,7 @@
 package com.example.cezar.economic_timer;
 
-
-
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.SystemClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +15,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-
 public class TimerActivity extends AppCompatActivity {
     Toolbar toolbar;
 
@@ -28,12 +24,8 @@ public class TimerActivity extends AppCompatActivity {
     private ImageButton imgbtnStop;
     private Chronometer mChronometer;
 
-
     public long saveTime;
     private long lastPause;
-
-    public static String filename = "MySharedString";
-    SharedPreferences someData;
     protected long time;
 
 
@@ -51,10 +43,6 @@ public class TimerActivity extends AppCompatActivity {
         imgbtnStop = (ImageButton) findViewById(R.id.imgButtonStop);
 
         mChronometer = (Chronometer) findViewById(R.id.chronometer);
-
-        //someData = getSharedPreferences(filename, 0);
-        //long savedValue = someData.getLong(filename, 0);
-        //final Editor editor = someData.edit();
 
         mChronometer.setText("00:00:00");
         mChronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
@@ -125,8 +113,6 @@ public class TimerActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
-
-                                //Intent bundleint = new Intent()
                                 saveTime = mChronometer.getBase();
                                 //long seconds = (int)(saveTime);
                                 Intent i = new Intent(TimerActivity.this, HistoryActivity.class);

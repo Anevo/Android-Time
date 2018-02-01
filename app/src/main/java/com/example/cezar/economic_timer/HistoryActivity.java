@@ -9,9 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-//long savedValue = 0l;
-//SharedPreferences someData;
-
 public class HistoryActivity extends TimerActivity{
 
     TextView textView;
@@ -24,27 +21,13 @@ public class HistoryActivity extends TimerActivity{
 
         toolbar_h = (Toolbar) findViewById(R.id.toolbar_history);
         setSupportActionBar(toolbar_h);
-        /*
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String value = extras.getString("Timer");
-            //The key argument here must match that used in the other activity
-        }*/
 
         textView = (TextView) findViewById(R.id.textView);
 
         long value = getIntent().getIntExtra("Timer", 0);
 
-        //TextView textView = new TextView(this);
         textView.setTextSize(30);
         textView.setText(String.valueOf(value));
-        //setContentView(value);
-
-        //Intent intent = getIntent();
-        //String value = intent.getStringExtra("Timer");
-        //The key argument here must match that used in the other activity
-
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
