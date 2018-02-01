@@ -1,11 +1,13 @@
 package com.example.cezar.economic_timer;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -50,19 +52,21 @@ public class MainActivity extends AppCompatActivity {
                 //LoginFunction();
             }
         });
-
     }
 
-    private void validate (String usrEmail, String userPassword){
-        if ((usrEmail.equals("test@test.com")) && (userPassword.equals("test"))){
+    private void validate(String usrEmail, String userPassword) {
+        if ((usrEmail.equals("test@test.com")) && (userPassword.equals("test"))) {
             Intent intent = new Intent(MainActivity.this, TimerActivity.class);
             startActivity(intent);
         }
     }
 
 
+    public void hideKeyboard(View view) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+    }
 }
-
 
 
 

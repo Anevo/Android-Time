@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cezar.economic_timer.MainActivity">
+    tools:context="com.example.cezar.economic_timer.MainActivity"
+    android:onClick="hideKeyboard">
 
     <EditText
         android:id="@+id/ed_email_login"
